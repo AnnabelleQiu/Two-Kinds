@@ -1,40 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
     margin: 0;
     padding: 0;
-    background-color: #f8f3ef;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, #fff0f6, #f3d9fa);
+    background-attachment: fixed;
     color: #333;
   }
   
+  /* Header */
   header {
-    background-color: #d8b4fe;
-    padding: 2rem;
+    background: linear-gradient(to right, #cdb4db, #d0bfff);
+    padding: 3rem 2rem;
     text-align: center;
     color: white;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  /* Navigation */
   nav {
-    background-color: #f3e8ff;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     padding: 1rem;
     text-align: center;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
   
   nav a {
-    margin: 0 1rem;
-    color: #6b21a8;
+    margin: 0 1.2rem;
+    color: #7b2cbf;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease;
   }
   
+  nav a:hover {
+    color: #5a189a;
+    border-bottom: 2px solid #5a189a;
+  }
+  
+  /* Section styling */
   section {
-    padding: 2rem;
-    border-bottom: 1px solid #e5e7eb;
+    max-width: 850px;
+    background-color: white;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
   }
   
+  h2 {
+    font-family: 'Playfair Display', serif;
+    color: #5e548e;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: #7b2cbf;
+    margin-top: 1.5rem;
+  }
+  
+  /* List style */
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Footer */
   footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #ede9fe;
-    font-size: 0.9rem;
+    padding: 2rem;
+    background-color: #e7c6ff;
+    font-size: 0.95rem;
+    color: #4a4e69;
+    margin-top: 4rem;
+    font-style: italic;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
