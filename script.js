@@ -157,22 +157,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const fullLetter = `Dear Mom,
 
-    When I was younger, I thought you were trying to shape me into someone I could never be.
+    When I was younger, I thought you were trying to shape me into someone I wasn't. The piano felt like a daily reminder that I wasn’t enough—not smart enough, not talented enough. And when I shouted those cruel words, I thought I had won. But growing up has a way of quieting pride.
     
-    Every “Four clock” felt like a dismissal of who I already was. I thought the piano was your weapon, a daily reminder that I wasn’t enough—not smart enough, not talented enough, not the daughter you wanted. And when I shouted those words—cruel, final words—I thought I had won.
+    Now I understand you weren't trying to control me. you were trying to save something: the life you lost. You never talked about the daughters before me, the life before America, or the weight you carried across oceans. But I see it now, in every push you gave me: you wanted me to live the life they never got to. You wanted my survival to mean something. You wanted you to mean something.
     
-    But growing up has a way of quieting pride.
-    
-    I now understand you weren't trying to control me—you were trying to save something. Something you had lost. You never talked about the daughters before me, the life before America, or the weight you carried across oceans. But I see it now, in every push you gave me: you wanted me to live the life they never got to. You wanted my survival to mean something. You wanted you to mean something.
-    
-    You lost more than I could ever understand. And instead of mourning out loud, you turned loss into expectation—into me.
-    
-    The truth is, I couldn’t carry all of that when I was a child. I didn’t know how. I only saw pressure where there was actually protection, silence where there was grief, anger where there was unspeakable love.
-    
-    I played that piano again recently. Not to impress you. Not to win anything. Just to remember you. And as my fingers found the keys, I finally heard your voice—beneath the silence, between the notes.
-    
-    I’m still not a genius. I never was.
-    But I am your daughter.
+    You lost more than I could ever understand. And instead of mourning out loud, you turned loss into expectation—into me. The truth is, I couldn’t carry all of that when I was a child. I only saw pressure. But there was love in the silence, and grief behind your strength.
+    I played that piano again recently. Not to impress you. Not to win anything. Just to remember you. And as my fingers found the keys, I finally heard your voice—beneath the silence. I’m still not a genius. I never was. But I am your daughter.
     And now, I think I’m finally proud of that.
     
     Love,
@@ -203,5 +193,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//quote variables
+  const jingMeiQuotes = [
+    "Why can’t I be myself?",
+    "Then I wish I were dead! Like them!",
+    "I’m not a genius!",
+    "You just want me to be someone I’m not!"
+  ];
+  
+  const momQuotes = [
+    "Only two kinds of daughters...",
+    "You be best. You can be anything you want to be.",
+    "You don’t try!",
+    "You have natural talent!"
+  ];
+  
+  let jmIndex = 0;
+  let momIndex = 0;
+  
+  document.getElementById("jingmei-quote").addEventListener("click", () => {
+    jmIndex = (jmIndex + 1) % jingMeiQuotes.length;
+    const quote = document.getElementById("jingmei-quote");
+    quote.textContent = `“${jingMeiQuotes[jmIndex]}”`;
+    quote.classList.add('bubble2');
+  });
+  
+  document.getElementById("mother-quote").addEventListener("click", () => {
+    momIndex = (momIndex + 1) % momQuotes.length;
+    const quote = document.getElementById("mother-quote");
+    quote.textContent = `“${momQuotes[momIndex]}”`;
+    quote.classList.add('bubble2');
+  });
   
