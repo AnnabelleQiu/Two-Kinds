@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,52 +6,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Two Kinds by Amy Tan</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&family=Playfair+Display:wght@600&family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Two Kinds</h1>
-    <p>by Amy Tan</p>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>Two Kinds</h1>
+        <p class="mla-credit">
+          Annabelle Qiu<br>
+          Mrs. Larsen<br>
+          DE Short Story 155<br>
+          6 May 2025
+        </p>
+        <p class="music-note">🎵 Click anywhere to hear the music</p>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#characters">Characters</a>
-    <a href="#themes">Themes</a>
-    <a href="#reflection">Reflection</a>
+  <!-- Piano Key Navigation -->
+  <nav class="piano-nav">
+    <a href="#home" class="white-key">Home</a>
+    <div class="black-key"></div>
+    <a href="#timeline" class="white-key">Timeline</a>
+    <div class="black-key"></div>
+    <a href="#characters" class="white-key">Characters</a>
+    <div class="black-key"></div>
+    <a href="#themes" class="white-key">Themes</a>
+    <div class="black-key"></div>
+    <a href="#key-scene" class="white-key">Key Scene</a>
+    <div class="black-key"></div>
+    <a href="#letter" class="white-key">Letter</a>
   </nav>
 
-  <section id="home" class="fade-in">
-    <h2>Welcome</h2>
-    <p>This website explores <em>Two Kinds</em> by Amy Tan, diving into its characters, themes, and personal meaning to me.</p>
+  <!-- Home -->
+  <section id="home" class="opening-section">
+    <div class="home-overlay">
+      <h1 id="typewriter-text">If you were ever forced to learn piano, this story will hit home.</h1>
+      <p class="home-subtext fade-in-delay">
+        Jing-mei was expected to be a prodigy.<br>
+        Her mother believed in the American dream—she just wanted to be herself.<br>
+        Amy Tan’s <em>Two Kinds</em> isn’t just about conflict—it’s about silence, sacrifice, and love without words.
+      </p>
+    </div>
   </section>
+  
 
-  <section id="characters" class="fade-in">
-    <h2>Characters</h2>
-    <h3>Jing-mei (June)</h3>
-    <p>A Chinese-American girl struggling between her mother’s expectations and her own identity.</p>
-    <h3>Jing-mei’s Mother</h3>
-    <p>A strict but loving immigrant mother who believes in the American Dream and pushes her daughter to become a prodigy.</p>
+  <!-- Timeline -->
+  <section id="timeline">
+    <h2>Jing-mei’s Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event left">
+        <div class="content">
+          <h3>Childhood Hope</h3>
+          <p>Her mother sees American TV prodigies and believes Jing-mei can become one too.</p>
+        </div>
+      </div>
+  
+      <div class="timeline-event right">
+        <div class="content">
+          <h3>Pressure Builds</h3>
+          <p>Jing-mei starts piano lessons she never asked for. Her mother believes hard work will guarantee success.</p>
+        </div>
+      </div>
+  
+      <div class="timeline-event left">
+        <div class="content">
+          <h3>Failed Recital</h3>
+          <p>After little practice, Jing-mei embarrasses herself at a talent show. Her mother remains silent, but expectations stay.</p>
+        </div>
+      </div>
+  
+      <div class="timeline-event right">
+        <div class="content">
+          <h3>Rebellion</h3>
+          <p>Jing-mei finally explodes: “I wish I were dead. Like them.” A deep crack forms between them.</p>
+        </div>
+      </div>
+  
+      <div class="timeline-event left">
+        <div class="content">
+          <h3>Years Later</h3>
+          <p>
+            Jing-mei touches the keys again—not to perform, but to remember. The piano never left her; it simply waited.
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
   </section>
-
+  
+<!-- Characters -->
+  <section id="characters">
+    <h2>Mother & Daughter: Words Left Behind</h2>
+    <div class="dialogue-container">
+      
+      <div class="character" id="jingmei">
+        <img src="images/JingMei.png" alt="Jing-mei" />
+        <div class="speech-bubble" id="jingmei-quote">“Why can’t I be myself?”</div>
+      </div>
+  
+      <div class="character" id="mother">
+        <img src="images/JingMeiMOM.png" alt="Mother" />
+        <div class="speech-bubble" id="mother-quote">“Only two kinds of daughters...”</div>
+      </div>
+      
+    </div>
+  </section>
+  
+<!-- Themes -->
   <section id="themes" class="fade-in">
-    <h2>Themes & Symbols</h2>
-    <ul>
-      <li><strong>Identity & Self-Worth:</strong> Jing-mei’s struggle to define herself on her own terms.</li>
-      <li><strong>Mother-Daughter Conflict:</strong> The emotional tug-of-war between expectations and independence.</li>
-      <li><strong>Symbol of the Piano:</strong> Represents both pressure and reconciliation.</li>
-    </ul>
+    <h2>🎹 Themes That Resonate</h2>
+    <div class="themes-container">
+      
+      <div class="theme-card">
+        <div class="emoji">🧬</div>
+        <h3>Identity</h3>
+        <p>“Not rebellion—just a girl trying to be seen.”</p>
+      </div>
+  
+      <div class="theme-card">
+        <div class="emoji">🧨</div>
+        <h3>Expectation</h3>
+        <p>“Love isn’t always gentle. Sometimes, it wears pressure’s mask.”</p>
+      </div>
+  
+      <div class="theme-card">
+        <div class="emoji">🎹</div>
+        <h3>The Piano</h3>
+        <p>“Not an instrument—but a bridge of silence between mother and daughter.”</p>
+      </div>
+  
+    </div>
   </section>
+  
+<!-- Key-scene -->
+<section id="scene" class="fade-in">
+  <h2>Key Scene: The Breaking Point</h2>
 
-  <section id="reflection" class="fade-in">
-    <h2>My Reflection</h2>
-    <p>This story really touched me because I also come from a background where expectations and personal dreams often clash. Jing-mei’s experience helped me reflect on my own growth and relationship with my mom.</p>
-  </section>
+  <div class="key-scene">
+    <div class="chat-box"></div>
+   
+
+    <div class="piano-track" id="pianoTrack"></div>
+
+    
+  
+
+  <button id="playNext">▶ Keep going...</button>
+
+
+  
+  
+  
+<!-- Letter-->
+<section id="letter-section">
+  <div class="letter-container">
+    <img src="images/envelope-closed.png" id="envelope" alt="Envelope" />
+    <div id="letter-content" class="hidden">
+      <div class="parchment">
+        <p id="typed-text"></p>
+      </div>
+      <button id="done-reading">Done Reading</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Music -->
+  <audio id="bg-music" autoplay loop muted>
+    <source src="audio/PLeading Child and Perfectly Contented.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="music-control">
+    <button id="music-toggle" aria-label="Toggle Music">🔇</button>
+  </div>
 
   <footer>
-    <p>Created with 💕 by Yoyo | Saint John Vianney High School | 2025</p>
+    <p>Created by Annabelle Qiu · Saint John Vianney High School · 2025</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const jingMeiQuotes = [
+      "Why can’t I be myself?",
+      "Then I wish I were dead! Like them!",
+      "I’m not a genius!",
+      "You just want me to be someone I’m not!"
+    ];
+  
+    const momQuotes = [
+      "Only two kinds of daughters...",
+      "You be best. You can be anything you want to be.",
+      "You don’t try!",
+      "You have natural talent!"
+    ];
+  
+    let jmIndex = 0;
+    let momIndex = 0;
+  
+    document.getElementById("jingmei").addEventListener("click", () => {
+      jmIndex = (jmIndex + 1) % jingMeiQuotes.length;
+      document.getElementById("jingmei-quote").textContent = `“${jingMeiQuotes[jmIndex]}”`;
+    });
+  
+    document.getElementById("mother").addEventListener("click", () => {
+      momIndex = (momIndex + 1) % momQuotes.length;
+      document.getElementById("mother-quote").textContent = `“${momQuotes[momIndex]}”`;
+    });
+  </script>
+
+
+
+
+
+  
 </body>
 </html>
