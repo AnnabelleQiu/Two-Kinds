@@ -100,22 +100,29 @@
   </section>
   
 <!-- Characters -->
-  <section id="characters">
-    <h2>Mother & Daughter: Words Left Behind</h2>
-    <div class="dialogue-container">
-      
-      <div class="character" id="jingmei">
-        <img src="images/JingMei.png" alt="Jing-mei" />
-        <div class="speech-bubble" id="jingmei-quote">“Why can’t I be myself?”</div>
-      </div>
-  
-      <div class="character" id="mother">
-        <img src="images/JingMeiMOM.png" alt="Mother" />
-        <div class="speech-bubble" id="mother-quote">“Only two kinds of daughters...”</div>
-      </div>
-      
+<section id="characters">
+  <h2>Mother & Daughter: Words Left Behind</h2>
+  <div class="dialogue-container">
+
+    <div class="character-card">
+      <img src="images/JingMei.png" alt="Jing-mei" />
+      <div class="speech-bubble" id="jingmei-quote">“Why can’t I be myself?”</div>
+      <p class="character-desc">
+        Jing-mei, the narrator, is a Chinese-American girl caught between her mother’s expectations and her desire to be herself. She is strong-willed, introspective, and yearning to be heard.
+      </p>
     </div>
-  </section>
+
+    <div class="character-card">
+      <img src="images/JingMeiMOM.png" alt="Mother" />
+      <div class="speech-bubble" id="mother-quote">“Only two kinds of daughters...”</div>
+      <p class="character-desc">
+        Jing-mei’s mother, a Chinese immigrant, believes in the American dream but expresses love through discipline and sacrifice. Her silence hides a lifetime of loss.
+      </p>
+    </div>
+
+  </div>
+</section>
+
   
 <!-- Themes -->
   <section id="themes" class="fade-in">
@@ -144,18 +151,18 @@
   </section>
   
 <!-- Key-scene -->
-<section id="scene" class="fade-in">
+<section id="key-scene" class="fade-in">
   <h2>Key Scene: The Breaking Point</h2>
 
   <div class="key-scene">
     <div class="chat-box"></div>
     <div class="piano-track" id="pianoTrack"></div>
-    <button id="playNext">▶ Keep going...</button>
+    <button id="playNext">▶ Tap to play...</button>
   </div>
 </section>
 
 <!-- ✅ Letter section 单独存在 -->
-<section id="letter-section">
+<section id="letter">
   <h2>Key Scene: Letter from Jing-mei</h2>
   <div class="letter-container">
     <img src="images/envelope-closed.png" id="envelope" alt="Envelope" />
@@ -185,34 +192,7 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    const jingMeiQuotes = [
-      "Why can’t I be myself?",
-      "Then I wish I were dead! Like them!",
-      "I’m not a genius!",
-      "You just want me to be someone I’m not!"
-    ];
   
-    const momQuotes = [
-      "Only two kinds of daughters...",
-      "You be best. You can be anything you want to be.",
-      "You don’t try!",
-      "You have natural talent!"
-    ];
-  
-    let jmIndex = 0;
-    let momIndex = 0;
-  
-    document.getElementById("jingmei").addEventListener("click", () => {
-      jmIndex = (jmIndex + 1) % jingMeiQuotes.length;
-      document.getElementById("jingmei-quote").textContent = `“${jingMeiQuotes[jmIndex]}”`;
-    });
-  
-    document.getElementById("mother").addEventListener("click", () => {
-      momIndex = (momIndex + 1) % momQuotes.length;
-      document.getElementById("mother-quote").textContent = `“${momQuotes[momIndex]}”`;
-    });
-  </script>
 
 
 
