@@ -154,7 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const envelope = document.getElementById("envelope");
     const letterContent = document.getElementById("letter-content");
     const typedText = document.getElementById("typed-text");
-  
+    const doneReading = document.getElementById("done-reading");
+
     const fullLetter = `Dear Mom,
 
     When I was younger, I thought you were trying to shape me into someone I wasn't. The piano felt like a daily reminder that I wasn’t enough—not smart enough, not talented enough. And when I shouted those cruel words, I thought I had won. But growing up has a way of quieting pride.
@@ -170,28 +171,43 @@ document.addEventListener("DOMContentLoaded", function () {
     
   
     envelope.addEventListener("click", function () {
-      envelope.classList.add("opened");
+        envelope.classList.add("opened");
+
+      
+          setTimeout(() => {
+            envelope.style.display = "none";
+            letterContent.classList.remove("hidden");
+            typeText(fullLetter, typedText, 25, () => {
+              // 👇 打字完后才显示按钮
+              doneReading.classList.remove("hidden");
+            });
+          }, 1000);
+        });
   
-      setTimeout(() => {
-        envelope.style.display = "none";
-        letterContent.classList.remove("hidden");
-        typeText(fullLetter, typedText, 25);
-      }, 1000);
-    });
-  
-    function typeText(text, element, speed) {
-      let i = 0;
-      const interval = setInterval(() => {
-        element.textContent += text[i];
-        i++;
-        if (i >= text.length) clearInterval(interval);
-      }, speed);
-    }
+    // ✨ 加上 callback 检查打字完成
+  function typeText(text, element, speed, callback) {
+    let i = 0;
+    const interval = setInterval(() => {
+      element.textContent += text[i];
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        if (callback) callback();
+      }
+    }, speed);
+  }
+
+// done reading
+doneReading.addEventListener("click", () => {
+    letterContent.classList.add("hidden");
+    document.getElementById("ending-screen").classList.add("show");
   });
+});
   
 
 
 
+  
 
 //quote variables
   const jingMeiQuotes = [
@@ -224,4 +240,3 @@ document.addEventListener("DOMContentLoaded", function () {
     quote.textContent = `“${momQuotes[momIndex]}”`;
     quote.classList.add('bubble2');
   });
-  
