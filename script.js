@@ -155,16 +155,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const letterContent = document.getElementById("letter-content");
     const typedText = document.getElementById("typed-text");
   
-    const fullLetter = `Dear Jing-mei,
-  
-  Even though we have disagreed, my heart has always held love for you. I see the effort in your eyes, the resistance in your voice, and the fire in your spirit. I wanted the best for you—not fame, but the belief that you could be great.
-  
-  That piano was never just about music. It was about hope, memory, and a gift I could not put into words.
-  
-  I am proud of you, even if I never found the right words to say it.
-  
-  Love,
-  Mom`;
+    const fullLetter = `Dear Mom,
+
+    When I was younger, I thought you were trying to shape me into someone I could never be.
+    
+    Every “Four clock” felt like a dismissal of who I already was. I thought the piano was your weapon, a daily reminder that I wasn’t enough—not smart enough, not talented enough, not the daughter you wanted. And when I shouted those words—cruel, final words—I thought I had won.
+    
+    But growing up has a way of quieting pride.
+    
+    I now understand you weren't trying to control me—you were trying to save something. Something you had lost. You never talked about the daughters before me, the life before America, or the weight you carried across oceans. But I see it now, in every push you gave me: you wanted me to live the life they never got to. You wanted my survival to mean something. You wanted you to mean something.
+    
+    You lost more than I could ever understand. And instead of mourning out loud, you turned loss into expectation—into me.
+    
+    The truth is, I couldn’t carry all of that when I was a child. I didn’t know how. I only saw pressure where there was actually protection, silence where there was grief, anger where there was unspeakable love.
+    
+    I played that piano again recently. Not to impress you. Not to win anything. Just to remember you. And as my fingers found the keys, I finally heard your voice—beneath the silence, between the notes.
+    
+    I’m still not a genius. I never was.
+    But I am your daughter.
+    And now, I think I’m finally proud of that.
+    
+    Love,
+    Jing-mei`;
+    
   
     envelope.addEventListener("click", function () {
       envelope.classList.add("opened");
