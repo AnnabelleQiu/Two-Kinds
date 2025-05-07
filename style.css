@@ -154,10 +154,9 @@
 
 .dialogue-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   margin-top: 2rem;
 }
 /* charCter*/
@@ -182,6 +181,26 @@
 }
 
 /* speech */
+.speech-bubble {
+  transition: transform 0.2s ease, box shadow 0.2s ease;
+  cursor: pointer;
+  min-height: 3.6rem;
+  margin: 1rem 0 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background: #f7f5f0;
+  border-radius: 16px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  max-width: 220px;      /* ✅ 防止一行太长 */
+}
+.speech-bubble:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fdf7e2; /* 可选：让它更像纸 */
+}
+
 
 .bubble {
   display: flex;
@@ -195,6 +214,27 @@
   box-shadow: 0 5px 16px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
+.bubble2 {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: #f5f0ea;
+  color: #333;
+  border-radius: 16px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  max-width: 80%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.bubble2:hover{
+  background-color:#f0e8de;
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  cursor:pointer;
+}
+
 /* themes*/
 #themes h2 {
   text-align: center;
@@ -604,14 +644,29 @@ ul li {
   margin-bottom: 0.8rem;
 }
 
-
 /* Characters */
-.character-cards {
+.character-desc {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+.character-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  text-align: center;
+}
+
+.character-card img  {
+  width: 110%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 
@@ -800,16 +855,17 @@ footer {
 .parchment {
   background-image: url('images/parchment.png'); /* 替换成你的羊皮纸图 */
   background-size: cover;
-  padding: 2rem;
+  padding: 6rem;
   width: 90%;
   max-width: 600px;
   min-height: 300px;
+  margin: 0 auto;
   font-family: 'Noto Serif SC', serif;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.5;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+ 
   text-align: left;
   white-space: pre-wrap;
 }
