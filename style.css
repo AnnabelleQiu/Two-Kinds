@@ -1,18 +1,20 @@
+
+
+/*home session*/
 .opening-section {
-  height: 100vh;
-  background-image: url('images/MomStaresAtPiano.png');
-  background-size: cover;
+  height: 115vh;
   background-position: center;
   position: relative;
-  color: white;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  background: none;
+  z-index: 1;
+  display: flex;
+  color: #fff;
 }
 
-/*home session*/
 
 .home-overlay {
   position: relative;
@@ -41,19 +43,6 @@
 
 
 
-
-
-
-
-.opening-section {
-  position: relative;
-  background: none;
-  color: #fff;
-  padding: 4rem 2rem;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-}
 .home-content {
   display: flex;
   flex-direction: column;
