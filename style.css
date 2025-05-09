@@ -32,13 +32,17 @@
 
 
 .floating-photo {
-  width: 90%;
-  max-width: 700px;
-  margin:20rem auto 10rem auto;
-  border-radius: 20px;
-  box-shadow: 0 20px 80px rgba(243, 228, 228, 0.6); /* 阴影效果让它“漂浮” */
-  margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px rgba(245, 241, 241, 0.39);
+    margin-bottom: 2rem;
 }
+
+.floating-photo {
+    max-width: 700px;
+     margin: 20rem auto 2rem;
+}
+
 
 
 .opening-section {
