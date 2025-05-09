@@ -515,7 +515,6 @@
   width: 0;
   
 }
-
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -708,6 +707,7 @@ section {
   opacity: 0;
   backdrop-filter: blur(3px);
 }
+
 
 h2 {
   font-family: 'Playfair Display', serif;
