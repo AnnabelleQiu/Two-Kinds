@@ -29,16 +29,20 @@
   box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
 }
 
-
-
 .floating-photo {
   width: 90%;
   max-width: 700px;
-  margin:20rem auto 10rem auto;
+  margin:5 auto 2rem auto;
   border-radius: 20px;
   box-shadow: 0 20px 80px rgba(243, 228, 228, 0.6); /* 阴影效果让它“漂浮” */
-  margin-bottom: 2rem;
+  transform: translateY(15%);
+ 
 }
+
+
+
+
+
 
 
 .opening-section {
@@ -55,17 +59,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 720px;
-}
-.floating-photo {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 80px rgba(245, 241, 241, 0.39);
-    margin-bottom: 2rem;
-}
-
-.floating-photo {
-    max-width: 700px;
-     margin: 20rem auto 2rem;
 }
 
 
