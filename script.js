@@ -12,6 +12,23 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
       }
     });
   });
+
+  //typewriter
+  window.addEventListener("DOMContentLoaded", () => {
+  const typewriter = document.getElementById("typewriter-text");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        typewriter.style.animation = "typing 4s steps(50, end) forwards, blink 0.75s step-end infinite";
+        observer.unobserve(typewriter); // 只触发一次
+      }
+    });
+  }, { threshold: 0.6 }); // 进入视口 60% 才触发
+
+  observer.observe(typewriter);
+});
+
   
   // Background music fade-in on first click
   let bgMusic; // 用 let 提前声明一次
@@ -172,17 +189,21 @@ document.addEventListener("DOMContentLoaded", function () {
   
     envelope.addEventListener("click", function () {
         envelope.classList.add("opened");
-
       
-          setTimeout(() => {
-            envelope.style.display = "none";
-            letterContent.classList.remove("hidden");
-            typeText(fullLetter, typedText, 25, () => {
-              // 👇 打字完后才显示按钮
-              doneReading.classList.remove("hidden");
-            });
-          }, 1000);
-        });
+        setTimeout(() => {
+          envelope.style.display = "none";
+          letterContent.classList.remove("hidden");
+          typeText(fullLetter, typedText, 25);
+        }, 1000);
+      
+        // ⏱ 让按钮 33 秒后再出现（避免用户提前点）
+        setTimeout(() => {
+          doneReading.classList.remove("hidden");
+        }, 10000);
+      });
+      
+
+        
   
     // ✨ 加上 callback 检查打字完成
   function typeText(text, element, speed, callback) {
