@@ -38,6 +38,8 @@
   border-radius: 20px;
   box-shadow: 0 20px 80px rgba(243, 228, 228, 0.6); /* 阴影效果让它“漂浮” */
   margin-bottom: 2rem;
+  z-index:1;
+  position: relative;
 }
 
 .opening-section {
