@@ -12,12 +12,58 @@
   padding: 2rem;
 }
 
+/*home session*/
+
 .home-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateY(-200%);
+  background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 20px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
 }
+
+
+
+.floating-photo {
+  width: 90%;
+  max-width: 700px;
+  margin:20rem auto 10rem auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px rgba(243, 228, 228, 0.6); /* 阴影效果让它“漂浮” */
+  margin-bottom: 2rem;
+}
+
+.opening-section {
+  position: relative;
+  background: none;
+  color: #fff;
+  padding: 4rem 2rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+}
+.floating-photo {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px rgba(245, 241, 241, 0.39);
+  margin-bottom: 2rem;
+}
+
+
+
 
 /* Timeline section base */
 #timeline {
@@ -467,7 +513,7 @@
   overflow: hidden;
   border-right: 3px solid white;
   width: 0;
-  animation: typing 4s steps(50, end) forwards, blink 0.75s step-end infinite;
+  
 }
 
 @keyframes typing {
@@ -478,6 +524,12 @@
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
+.hidden-text {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
 
 .home-subtext {
   margin-top: 2rem;
@@ -492,17 +544,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', 'Noto Serif SC', serif;
-  background: linear-gradient(to bottom, #f5f2ed, #e8dfd6);
-
-  background-attachment: fixed;
+  background: url('images/emotional-bg.jpg.png') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
 }
+
 
 
 /* Hero Section */
 .hero {
  
-  height: 100vh;
+  height: 150vh;
   background-image: url('images/PianoUnderLamp.png'); /* 你等会配图！ */
   background-size: cover;
   background-position: center;
@@ -510,7 +562,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  overflow: visible;
 }
+
+
 
 
 .overlay {
@@ -529,12 +585,27 @@ body {
   color: #fff;
 }
 
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(60px);
+    filter: brightness(0.6) blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1) blur(0);
+  }
+}
 
 .hero-text h1 {
-  font-size: 4rem;
+ font-size: 8rem;
   font-family: 'Playfair Display', serif;
-  margin-bottom: 0.5rem;
   letter-spacing: 2px;
+  color: #eaf6ff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  animation: fadeZoomIn 1.8s ease-out forwards;
 }
 
 
@@ -545,7 +616,9 @@ body {
 }
 
 
-/* Enter button */
+
+
+/* Enter button*/
 .enter-btn {
   padding: 0.75rem 1.5rem;
   background-color: #a47148; /* 木色/铜棕色 */
@@ -565,14 +638,33 @@ body {
 
 
 /* Navigation */
-nav {
+.piano-nav {
   display: flex;
   justify-content: center;
-  background-color: #f5f2ed;
+  background: rgba(255, 255, 255, 0.3);  /* ⬅️ 更淡一点，更柔和 */
+  backdrop-filter: blur(10px);
   padding: 1rem 0;
   gap: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-top: 3px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 3px solid rgba(255,255,255,0.25);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+.piano-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  
+  pointer-events: none;
+  z-index: 1; /* ✅ 盖在背景上，不盖文字 */
+}
+
 
 
 nav a {
@@ -743,10 +835,15 @@ footer {
 
 
 #music-control {
-  position: fixed;
+  position: fixed; /* ❗重点：用 fixed，而不是 absolute */
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 999999 !important;
+  opacity: 1;  /* 如果你用动画再改为 0/1 */
+  pointer-events: all;
+  display: block !important;
+  padding: 10px;
+
 }
 
 
@@ -773,7 +870,6 @@ footer {
   align-items: flex-start;
   justify-content: center;
   gap: 4px;
-  background-color: #f5f2ed;
   padding: 1rem 0;
   position: relative;
 }
@@ -888,8 +984,14 @@ footer {
 }
 
 #done-reading:hover {
-  background-color: #7a5130;
+  background-color: #8c6245; /* 柔和木色 */
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.03);
+  transition: all 0.3s ease;
 }
+
+
 
 
 #ending-screen {
