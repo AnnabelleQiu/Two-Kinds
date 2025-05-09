@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   z-index: 2;
-  transform: translateY(-200%);
+  transform: translateY(-130%);
   background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 20px;
