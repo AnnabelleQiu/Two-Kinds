@@ -29,7 +29,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   observer.observe(typewriter);
 });
 
-  
   // Background music fade-in on first click
   let bgMusic; // 用 let 提前声明一次
 
